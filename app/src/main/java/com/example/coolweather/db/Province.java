@@ -7,8 +7,11 @@ import org.litepal.crud.DataSupport;
  */
 
 public class Province extends DataSupport {
+    public static final String PROVINCE="Province";
+
     private int id;
     private String provinceName;
+    //从服务器上请求到的
     private int provinceCode;
 
     public int getId() {
@@ -34,4 +37,5 @@ public class Province extends DataSupport {
     public void setProvinceCode(int provinceCode) {
         this.provinceCode = provinceCode;
     }
+
 }
