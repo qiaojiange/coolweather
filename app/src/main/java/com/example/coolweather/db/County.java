@@ -7,6 +7,8 @@ import org.litepal.crud.DataSupport;
  */
 
 public class County extends DataSupport {
+    public static final String COUNTY="County";
+
 
     private int id;
     private String countyName;
