@@ -1,10 +1,10 @@
 package com.example.coolweather;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.TextViewCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -95,6 +95,7 @@ public class ChooseAreaFragment extends Fragment {
     }
 
 
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -108,6 +109,20 @@ public class ChooseAreaFragment extends Fragment {
               }else if(currentLevel == LEVEL_CITY){
                   selectCity = cityList.get(position);
                   queryCounties();
+              }else if(currentLevel == LEVEL_COUNTY){
+//                  selectCounty = countyList.get(position);
+                  String weatherId = countyList.get(position).getWeatherId();
+                  Log.d(TAG, "onItemClick: weatherId = "+weatherId);
+
+//                  Intent intent = new Intent(getActivity(),TestActivity.class);
+//                  startActivity(intent);
+//                  getActivity().finish();
+
+                  Intent intent = new Intent(getActivity(),WeatherActivity.class);
+                  intent.putExtra("weather_id",weatherId);
+                  startActivity(intent);
+                  getActivity().finish();
+
               }
           }
 
