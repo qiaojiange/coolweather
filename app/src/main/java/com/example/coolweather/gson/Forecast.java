@@ -21,13 +21,35 @@ public class Forecast {
     public class Temperature{
         public String max;
         public String min;
+
+        @Override
+        public String toString() {
+            return "Temperature{" +
+                    "max='" + max + '\'' +
+                    ", min='" + min + '\'' +
+                    '}';
+        }
     }
 
 
     public class More{
         @SerializedName("txt_d")
         public String info;
+
+        @Override
+        public String toString() {
+            return "More{" +
+                    "info='" + info + '\'' +
+                    '}';
+        }
     }
 
-
+    @Override
+    public String toString() {
+        return "Forecast{" +
+                "date='" + date + '\'' +
+                ", temperature=" + temperature +
+                ", more=" + more +
+                '}';
+    }
 }

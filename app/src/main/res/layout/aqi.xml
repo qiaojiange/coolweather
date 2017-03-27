@@ -41,6 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:text="25"
                     android:textColor="#fff"
                     android:textSize="40sp"
                     />
@@ -73,6 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="#fff"
+                    android:text="78"
                     android:textSize="40sp"
                     />
 
