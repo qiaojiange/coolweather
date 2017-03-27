@@ -14,6 +14,7 @@ public class Weather {
 
     public Basic basic;
 
+    @SerializedName("aqi")
     public AQI aqi;
 
     public Now now;
@@ -22,4 +23,16 @@ public class Weather {
 
     @SerializedName("daily_forecast")
     public List<Forecast> forecastList;
+
+    @Override
+    public String toString() {
+        return "Weather{" +
+                "status='" + status + '\'' +
+                ", basic=" + basic +
+                ", aqi=" + aqi +
+                ", now=" + now +
+                ", suggestion=" + suggestion +
+                ", forecastList=" + forecastList +
+                '}';
+    }
 }

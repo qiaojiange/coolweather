@@ -22,5 +22,20 @@ public class Basic {
         @SerializedName("loc")
         public String updateTime;
 
+        @Override
+        public String toString() {
+            return "Update{" +
+                    "updateTime='" + updateTime + '\'' +
+                    '}';
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Basic{" +
+                "cityName='" + cityName + '\'' +
+                ", weatherId='" + weatherId + '\'' +
+                ", update=" + update +
+                '}';
     }
 }
