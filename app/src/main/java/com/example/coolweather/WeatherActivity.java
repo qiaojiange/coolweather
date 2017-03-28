@@ -56,7 +56,7 @@ public class WeatherActivity extends AppCompatActivity {
 
 
     public SwipeRefreshLayout swipeRefresh;
-    private String mWeatherId;
+    public String mWeatherId;
 
 
     public DrawerLayout drawerLayout;
@@ -181,6 +181,7 @@ drawerLayout = (DrawerLayout)findViewById(R.id.draw_layout);
      * @param weatherId
      */
     public void requestWeather(final String weatherId) {
+        mWeatherId = weatherId;
 
         String weatherUrl = "http://guolin.tech/api/weather?cityid=" + weatherId + "&key=b07cc009dec64a30bf7de9c66a67f7d8";
         Log.d(TAG, "requestWeather: weatherUrl=" + weatherUrl);
